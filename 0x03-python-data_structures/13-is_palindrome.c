@@ -1,83 +1,72 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-/* Definition of a singly linked list node */
-typedef struct listint_s {
-    int n;
-    struct listint_s *next;
-} listint_t;
+listint_t *reverse_listint(listint_t **head);
+int is_palindrome(listint_t **head);
+
+/**
+ * reverse_listint - Reverses a singly-linked listint_t list.
+ * @head: A pointer to the starting node of the list to reverse.
+ *
+ * Return: A pointer to the head of the reversed list.
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+	listint_t *node = *head, *next, *prev = NULL;
+
+	while (node)
+	{
+		next = node->next;
+		node->next = prev;
+		prev = node;
+		node = next;
+	}
+
+	*head = prev;
+	return (*head);
+}
 
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome.
- * @head: Pointer to the head of the list.
+ * @head: A pointer to the head of the linked list.
  *
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome.
- *         An empty list is considered a palindrome.
+ * Return: If the linked list is not a palindrome - 0.
+ *         If the linked list is a palindrome - 1.
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *slow = *head;
-    listint_t *fast = *head;
-    listint_t *prev = NULL;
-    listint_t *next = NULL;
+	listint_t *tmp, *rev, *mid;
+	size_t size = 0, i;
 
-    /* Find the middle of the list and reverse the first half */
-    while (fast != NULL && fast->next != NULL) {
-        fast = fast->next->next;
-        next = slow->next;
-        slow->next = prev;
-        prev = slow;
-        slow = next;
-    }
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
 
-    /* Adjust the middle pointer for odd-length lists */
-    if (fast != NULL)
-        slow = slow->next;
+	tmp = *head;
+	while (tmp)
+	{
+		size++;
+		tmp = tmp->next;
+	}
 
-    /* Compare the reversed first half with the second half */
-    while (prev != NULL && slow != NULL) {
-        if (prev->n != slow->n)
-            return 0;
-        prev = prev->next;
-        slow = slow->next;
-    }
+	tmp = *head;
+	for (i = 0; i < (size / 2) - 1; i++)
+		tmp = tmp->next;
 
-    return 1;
-}
+	if ((size % 2) == 0 && tmp->n != tmp->next->n)
+		return (0);
 
-/* Example usage */
-int main(void)
-{
-    listint_t *head = NULL;
+	tmp = tmp->next->next;
+	rev = reverse_listint(&tmp);
+	mid = rev;
 
-    /* Create a list with the values 1, 2, 3, 2, 1 */
-    listint_t *node1 = malloc(sizeof(listint_t));
-    listint_t *node2 = malloc(sizeof(listint_t));
-    listint_t *node3 = malloc(sizeof(listint_t));
-    listint_t *node4 = malloc(sizeof(listint_t));
-    listint_t *node5 = malloc(sizeof(listint_t));
-    node1->n = 1;
-    node1->next = node2;
-    node2->n = 2;
-    node2->next = node3;
-    node3->n = 3;
-    node3->next = node4;
-    node4->n = 2;
-    node4->next = node5;
-    node5->n = 1;
-    node5->next = NULL;
-    head = node1;
+	tmp = *head;
+	while (rev)
+	{
+		if (tmp->n != rev->n)
+			return (0);
+		tmp = tmp->next;
+		rev = rev->next;
+	}
+	reverse_listint(&mid);
 
-    /* Test the function */
-    printf("%d\n", is_palindrome(&head));  // Output: 1
-
-    /* Free the memory */
-    free(node1);
-    free(node2);
-    free(node3);
-    free(node4);
-    free(node5);
-
-    return 0;
+	return (1);
 }
