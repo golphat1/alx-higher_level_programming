@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-#0x0A. Python - Inheritance, task 7
-"""Function that defines a base geometry class BaseGeometry."""
+# 0x0A. Python - Inheritance, task 7
+
+"""Function defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
