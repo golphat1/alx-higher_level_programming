@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 4
-""" function checks if object is an instance of a class 
+""" function checks if object is an instance of a class
 that inherited from the specified class or not
 """
 
