@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 12
-"""
-MyInt class that inherits from int
-and overrides the == and != operators
-"""
+"""Define class MyInt that inherit from int."""
 
 
 class MyInt(int):
-    def __eq__(self, other):
-        return super().__ne__(other)
+    """Invert int operators == and !=."""
 
-    def __ne__(self, other):
-        return super().__eq__(other)
+    def __eq__(self, value):
+        """Override == opeartor with != behavior."""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with == behavior."""
+        return self.real == value
