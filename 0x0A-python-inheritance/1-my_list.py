@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-#0x0A. Python - Inheritance, task 1
-"""Defines an inherited list class MyList."""
+# 0x0A. Python - Inheritance, task 1
+
+"""Defines an inherited list class MyList"""
 
 
 class MyList(list):
