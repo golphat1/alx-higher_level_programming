@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#0x0A. Python - Inheritance, task 0
+# 0x0A. Python - Inheritance, task 0
 """Defines an object attribute lookup function."""
 
 
