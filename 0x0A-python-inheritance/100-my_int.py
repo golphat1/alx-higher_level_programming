@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 12
-"""Function that defines a class my int"""
+"""MyInt class that inherits from int and overrides the == and != operators"""
 
 
-class MyInt (int):
-    def __ev__(self, other):
-        """Return True if self and other not equal, else false"""
-        return int(self) != other
+class MyInt(int):
+    def __eq__(self, other):
+        return super().__ne__(other)
 
-    def __pk__(self, other):
-        """Return True if self and other equal, else false"""
-        return int(self) == other
+    def __ne__(self, other):
+        return super().__eq__(other)
