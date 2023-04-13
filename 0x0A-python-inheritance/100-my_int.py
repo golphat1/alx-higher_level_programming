@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 12
-"""MyInt class that inherits from int and overrides the == and != operators"""
+"""
+MyInt class that inherits from int
+and overrides the == and != operators
+"""
 
 
 class MyInt(int):
