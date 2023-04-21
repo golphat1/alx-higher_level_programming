@@ -201,17 +201,16 @@ class Rectangle:
         """
         Returns a string representation of a Rectangle instance
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                        self.y, self.width,
-                                                        self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, 
+                self.y, self.width, self.height)
 
     def __repr__(self):
         """
         Returns a string representation of a Rectangle instance that can be
         used to recreate the instance
         """
-        return "Rectangle({}, {}, {}, {}, {})".format(self.width, self.height,
-                                                       self.x, self.y, self.id)
+        return "Rectangle({}, {}, {}, {}, {})".format(self.width, self.height, 
+                self.x, self.y, self.id)
 
     def area(self):
         """
@@ -223,6 +222,7 @@ class Rectangle:
 
 
 """Module for Rectangle class"""
+
 
 class Rectangle:
     """Class that defines a rectangle"""
@@ -258,8 +258,6 @@ class Rectangle:
         for i in range(self.height):
             print("#" * self.width)
 
-
-
 class Rectangle(Base):
     """Class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -270,7 +268,8 @@ class Rectangle(Base):
         self.y = y
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, 
+               self.x, self.y, self.width, self.height)
 
 
 class Rectangle:
@@ -289,8 +288,6 @@ class Rectangle:
             for j in range(self.width):
                 print("#", end="")
             print()
-
-
 
 class Rectangle:
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -319,11 +316,6 @@ class Rectangle:
         if len(args) > 4:
             self.y = args[4]
 
-
-#!/usr/bin/python3
-""" Rectangle Module """
-
-
 class Rectangle:
     """ Rectangle Class """
 
@@ -351,8 +343,8 @@ class Rectangle:
 
     def __str__(self):
         """ String Representation Method """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}"
+    .format(self.id, self.x, self.y, self.width, self.height)
 
     def area(self):
         """ Area Method """
@@ -367,8 +359,8 @@ class Rectangle:
 
     def __repr__(self):
         """ Representation Method """
-        return "Rectangle({}, {}, {}, {}, {})".format(
-            self.width, self.height, self.x, self.y, self.id)
+        return "Rectangle({}, {}, {}, {}, {})"
+    .format(self.width, self.height, self.x, self.y, self.id)
 
     def __del__(self):
         """ Destructor Method """
@@ -391,7 +383,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return string representation of rectangle"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}"
+    .format(self.id,self.x, self.y, self.width, self.height)
 
     def area(self):
         """Return the area of the rectangle"""
@@ -399,7 +392,8 @@ class Rectangle(Base):
 
     def display(self):
         """Print a visual representation of the rectangle"""
-        print("\n" * self.y + (" " * self.x + "#" * self.width + "\n") * self.height, end="")
+        print("\n" * self.y + 
+                (" " * self.x + "#" * self.width + "\n") * self.height, end="")
 
     def update(self, *args, **kwargs):
         """Update the rectangle"""
@@ -430,7 +424,8 @@ class Square:
         self.y = y
 
     def __str__(self):
-        return "Square({}, {}, {}, {})".format(self.id, self.size, self.x, self.y)
+        return "Square({}, {}, {}, {})"
+    .format(self.id, self.size, self.x, self.y)
 
     def area(self):
         return self.size ** 2
