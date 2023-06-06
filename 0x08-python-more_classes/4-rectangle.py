@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""A class Rectangle that defines Rectangle."""
+"""
+A class Rectangle that defines a Rectangle.
+"""
 
 
 class Rectangle:
@@ -8,8 +10,7 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """
-        Initializes a new Rectangle.
+        """Initializes a new Rectangle.
 
         Args:
             width (int): The width of the new rectangle.
@@ -50,7 +51,7 @@ class Rectangle:
 
     def area(self):
         """
-        Returns the area of the Rectangle.
+        Return the area of the Rectangle.
         """
         return (self.__width * self.__height)
 
@@ -63,8 +64,7 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """
-        Returns the printable representation of the Rectangle.
+        """Return the printable representation of the Rectangle.
 
         Represents the rectangle with the # character.
         """
@@ -77,3 +77,11 @@ class Rectangle:
             if x != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+
+    def __repr__(self):
+        """
+        Return the string representation of the Rectangle.
+        """
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
