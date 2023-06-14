@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 13
 # 101-add_attribute.py
-"""Defines a function that adds attributes to objects."""
+"""Defines a function which adds attributes to objects."""
 
 
 def add_attribute(obj, att, value):

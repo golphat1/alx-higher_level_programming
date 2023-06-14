@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 8
 
-"""Function that defines a Rectangle subclass Square."""
+"""A function that defines a Rectangle subclass Square."""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """Represents a square."""
 
     def __init__(self, size):
         """Initialize a new square.

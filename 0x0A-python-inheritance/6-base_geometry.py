@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Function that defines a base geometry class BaseGeometry."""
+"""A function that defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
-    """this class represents a base geometry"""
+    """The class represents a base geometry"""
 
     def area(self):
         """method yet to be implemented"""

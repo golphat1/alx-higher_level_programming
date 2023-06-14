@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 12
-"""Define class MyInt that inherit from int."""
+"""A function which define class MyInt that inherit from int."""
 
 
 class MyInt(int):

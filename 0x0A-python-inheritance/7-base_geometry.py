@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 # 0x0A. Python - Inheritance, task 7
 
-"""Function defines a base geometry class BaseGeometry."""
+"""A Function that defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """Represents base geometry."""
 
     def area(self):
         """unmplemented, only raises exception to notify user."""
