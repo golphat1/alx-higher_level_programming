@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a text file-reading function.
-Must use the with statment.
+A function that defines a text file-reading function.
+It must use the with statment.
 You are not allowed to import any module.
 You don’t need to manage file permission or file doesn't exist exceptions.
 """
