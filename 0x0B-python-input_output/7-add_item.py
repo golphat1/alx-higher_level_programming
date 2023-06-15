@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Add all arguments to a Python list and save them to a file.
+Adds all arguments to a Python list and save them to a file.
 Create file if it doesn't exist
 No need to manage file permissions / exceptions.
 """

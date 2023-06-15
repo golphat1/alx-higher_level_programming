@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a Python class-to-JSON function.
+A function that defines a Python class-to-JSON function.
 obj is an instance of a Class
 All attributes of the obj Class are serializable
 Do not import any module

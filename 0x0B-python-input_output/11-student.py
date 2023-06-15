@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a class Student.
-Do not import any module
+Function that defines a class Student.
+Do not import any module.
 """
 
 
@@ -9,7 +9,7 @@ class Student:
     """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
+        """Initializes a new Student.
         Args:
             first_name (str): First name of the student.
             last_name (str): Last name of the student.
@@ -32,7 +32,7 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
-        """Replace all attributes of Student.
+        """Replaces all attributes of Student.
         Args:
             json (dict): The key/value pairs to replace attributes with.
         """

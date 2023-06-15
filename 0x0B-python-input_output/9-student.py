@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a class Student.
-Do not import any module.
+Define a class Student.
+Don't import any module.
 """
 
 

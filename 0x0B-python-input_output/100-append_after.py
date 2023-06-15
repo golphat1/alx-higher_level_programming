@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a text file insertion function.
+A function that defines a text file insertion function.
 Use the with statement
 No need to manage file permission or file doesn't exist exceptions.
 Do not import any module
@@ -15,8 +15,8 @@ def append_after(filename="", search_string="", new_string=""):
         new_string (str): String to insert.
     """
     text = ""
-    with open(filename) as r:
-        for line in r:
+    with open(filename) as v:
+        for line in v:
             text += line
             if search_string in line:
                 text += new_string

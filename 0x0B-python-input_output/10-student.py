@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Defines a class Student.
-You are not allowed to import any module
+Do not import any module.
 """
 
 
@@ -9,7 +9,7 @@ class Student:
     """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
+        """Initializes a new Student.
         Args:
             first_name (str): First name of the student.
             last_name (str): Last name of the student.
@@ -20,7 +20,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get dictionary representation of the Student.
+        """Gets a dictionary representation of the Student.
         If attrs is a list of strings, represents only those attributes
         included in the list.
         Args:
