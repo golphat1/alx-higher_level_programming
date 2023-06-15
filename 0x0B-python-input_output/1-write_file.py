@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Defines a file-writing function
-Use the with statement.
-No need to manage file permission exceptions
+A function that defines a file-writing function
+You must use the with statement.
+Don't manage file permission exceptions
 Function should create the file if doesn’t exist.
 Function overwrite the content of the file if it already exists.
 Don't allowed to import any module

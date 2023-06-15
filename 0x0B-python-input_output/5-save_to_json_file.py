@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a JSON file-writing function.
+iA function that defines a JSON file-writing function.
 Use the with statement
 No need to manage exceptions if the object can’t be serialized.
 No need to manage file permission exceptions.

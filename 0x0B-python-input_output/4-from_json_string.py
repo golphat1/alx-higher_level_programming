@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Defines a JSON-to-object function.
-No need to manage exceptions if the JSON string doesn’t represent an object.
+Don't manage exceptions if the JSON string doesn’t represent an object.
 """
 import json
 

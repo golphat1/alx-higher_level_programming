@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a file-appending function.
-If the file doesn’t exist, should be created
+A function that defines a file-appending function.
+Create file if iy doesn't exist.
 Must use the with statement
 No need to manage file permission or file doesn't exist exceptions.
 Do not import any module
