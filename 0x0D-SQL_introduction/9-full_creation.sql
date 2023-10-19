@@ -1,4 +1,4 @@
--- Script that creates a table called first_table in your MySQL server.
+-- Script that creates a table called second_table in your MySQL server.
 
 -- create the table.
 CREATE TABLE IF NOT EXISTS second_table (id INT,

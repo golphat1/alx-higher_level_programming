@@ -1,4 +1,4 @@
--- Script that prints the full description of the table first_table
+-- Script which prints the full description of the table first_table
 
--- print the table.
+-- prints the table.
 SHOW CREATE TABLE first_table;
