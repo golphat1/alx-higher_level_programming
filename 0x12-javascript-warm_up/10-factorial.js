@@ -7,14 +7,16 @@
  * You must do it recursively
  * You must use a function
  */
-function factorial (n) {
-	if (n < 0) {
-		return (-1);
-	}
-	if (n === 0 || isNaN(n)) {
-		return (1);
-	}
-	return (n * factorial (n - 1));
-}
+const computeFactorial = (n) => {
+  if (isNaN(n) || n === 0) {
+    return 1;
+  } else {
+    return n * computeFactorial(n - 1);
+  }
+};
 
-console.log(factorial(Number(process.argv[2])));
+const inputArgument = process.argv[2];
+
+const n = parseInt(inputArgument);
+
+console.log(computeFactorial(n));

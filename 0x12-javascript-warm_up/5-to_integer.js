@@ -5,8 +5,16 @@
  * if the first argument can be converted to an integer:
  * If the argument can’t be converted to an integer, print “Not a number”
  */
-if (isNaN(process.argv[2]) || process.argv[2] === undefined) {
-	console.log('Not a number');
+if (process.argv.length < 3) {
+  console.log("Not a number");
 } else {
-	console.log('My number: ', parseInt(process.argv[2]));
+  const inputArgument = process.argv[2];
+
+  const integerValue = parseInt(inputArgument);
+
+  if (!isNaN(integerValue)) {
+    console.log("My number:", integerValue);
+  } else {
+    console.log("Not a number");
+  }
 }

@@ -6,10 +6,18 @@
  * If only one argument is passed to the script, print “Argument found”
  * Otherwise, print “Arguments found”
  */
-if (process.argv.length === 2) {
-	console.log('No argument');
-} else if (process.argv.length === 3) {
-	console.log('Argument found');
-} else {
-	console.log('Arguments found');
+
+const numArguments = process.argv.length - 2; // Subtracting 2 to exclude 'node' and the script filename
+
+// Using a switch statement to print the appropriate message
+switch (numArguments) {
+  case 0:
+    console.log("No argument");
+    break;
+  case 1:
+    console.log("Argument found");
+    break;
+  default:
+    console.log("Arguments found");
+    break;
 }

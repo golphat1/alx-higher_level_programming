@@ -6,6 +6,8 @@
  * The second line: “Python is cool”
  * The third line: “JavaScript is amazing”
  */
-for (const line of ['C is fun', 'Python is coll', 'JavaScript is amazing']) {
-	console.log(line);
+const languages = ["C is fun", "Python is cool", "JavaScript is amazing"];
+
+for (let i = 0; i < languages.length; i++) {
+    console.log(languages[i]);
 }

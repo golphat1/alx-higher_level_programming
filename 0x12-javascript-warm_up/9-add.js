@@ -7,8 +7,12 @@
  * You have to define a function with this prototype: function add(a, b)
  */
 function add (a, b) {
-	const c = a + b;
-	console.log(c);
+	const sum = a + b;
+
+	console.log(sum);
 }
 
-add(Number(process.argv[2]), Number(process.argv[3]));
+const arg1 = parseInt(process.argv[2]);
+const arg2 = parseInt(process.argv[3]);
+
+add(arg1, arg2);
