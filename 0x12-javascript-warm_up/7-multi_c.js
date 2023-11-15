@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 /*
  * script that prints x times “C is fun”
  * Where x is the first argument of the script
@@ -7,16 +6,14 @@
  * You can use only two console.log
  * You must use a loop (while, for, etc.)
  */
-if (process.argv.length < 3) {
-  console.log("Missing number of occurrences");
+const args = process.argv[2];
+if (isNaN(args)) {
+  console.log('Missing number of occurences');
 } else {
-  const x = parseInt(process.argv[2]);
-
-  if (isNaN(x)) {
-    console.log("Missing number of occurrences");
-  } else {
-    for (let i = 0; i < x; i++) {
-      console.log("C is fun");
-    }
+  x = parseInt(args);
+  i = 0;
+  while (i < x) {
+    console.log('C is fun');
+    i++;
   }
 }

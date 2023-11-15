@@ -5,20 +5,16 @@
  * You must use the character X to print the square
  * You must use a loop (while, for, etc.)
  */
-if (process.argv.length <= 2) {
-    console.log("Missing size");
+const args = process.argv[2];
+if (isNaN(args)) {
+  console.log('Missing size');
 } else {
-	const size = parseInt(process.argv[2]);
-
-	if (isNaN(size)) {
-		console.log("Missing size");
-	} else {
-		for (let i = 0; i < size; i++) {
-			let row = "";
-			for (let j = 0; j < size; j++) {
-				row += "X";
-			}
-			console.log(row);
-		}
-	}
+  number = parseInt(args);
+  for (let i = 0; i < number; i++) {
+    let row = '';
+    for (let j = 0; j < number; j++) {
+      row += 'X';
+    }
+    console.log(row);
+  }
 }
