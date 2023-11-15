@@ -8,10 +8,10 @@
  */
 const args = process.argv[2];
 if (isNaN(args)) {
-  console.log('Missing number of occurences');
+  console.log('Missing number of occurrences');
 } else {
-  x = parseInt(args);
-  i = 0;
+  let x = parseInt(args);
+  let i = 0;
   while (i < x) {
     console.log('C is fun');
     i++;
