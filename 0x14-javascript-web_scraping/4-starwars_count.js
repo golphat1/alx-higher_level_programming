@@ -10,7 +10,7 @@ if (process.argv.length !== 3) {
 
 const apiUrl = process.argv[2];
 
-// Sends GET request to the Star Wars API
+// Send a GET request to the Star Wars API
 request.get(apiUrl, (error, response, body) => {
   if (error) {
     console.error(error);
@@ -26,3 +26,4 @@ request.get(apiUrl, (error, response, body) => {
     }
   }
 });
+
